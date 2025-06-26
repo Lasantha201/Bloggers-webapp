@@ -18,7 +18,7 @@
 
     --color-primary: #006d81;
     /* Softer version of #00404D */
-    --primary-light: hsl(192, 58%, 57%);
+    --primary-light: hsl(192, 41%, 44%);
     /* Lighter blue-green */
     --color-primary-variant: #cc66cc;
     /* Lighter magenta */
@@ -430,6 +430,22 @@ footer {
     color: var(--color-gray-200);
 }
 
+.btn.sm {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.btn.danger {
+    background: var(--color-red);
+}
+
+.btn:hover {
+    background: var(--color-gray-200);
+    color: var(--color-gray-900);
+}
+
+
+
 /* //////////////////// Single Post //////////////////// */
 
 .singlepost {
@@ -504,6 +520,19 @@ form {
     gap: 0.4rem;
 }
 
+.form_control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form_control.inline {
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
 input,
 textarea,
 select {
@@ -524,8 +553,88 @@ select {
     color: var(var(--color-primary));
 }
 
+/* //////////////////// Dashboard //////////////////// */
+
+.dash_im {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+}
+
+.dashboard {
+    margin-top: 6rem;
+
+}
+
+.dashboard_container {
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 1rem;
+    background: var(--primary-light);
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.dashboard aside a {
+    background-color: var(--color-primary);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.dashboard asideul li:not(:last-child) a {
+    border-bottom: 1px solid var(--primary-light);
+
+}
 
 
+.dashboard aside a:hover {
+    background: var(--color-bg);
+}
+
+.dashboard aside a.active {
+    background-color: var(--primary-light);
+}
+
+.dashboard main {
+    margin-left: 1.5rem;
+
+}
+
+.dashboard main h2 {
+    margin: 0 0 2rem 0;
+    line-height: 1;
+}
+
+.dashboard main table {
+    width: 100%;
+    text-align: left;
+}
+
+.dashboard main table th {
+    background: var(--color-primary);
+    padding: 0.8rem;
+    color: var(--color-white);
+
+}
+
+.dashboard main table td {
+    padding: 0.8rem;
+    color: var(--color-gray-900);
+    border-bottom: 1px solid var(--color-gray-300);
+}
+
+.dashboard main table tr:hover td {
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+
+}
+
+.sidebar_toggle {
+    display: none;
+}
 
 /* //////////////////// Media Queries(Medium Devices) //////////////////// */
 
@@ -689,10 +798,46 @@ select {
     /*|||||||||||||||| General form ||||||||||||||||*/
 
 
+    /*||||||||||||||||  Dashboard ||||||||||||||||*/
+
+    .dashboard_container {
+        display: grid;
+        /* Added */
+        grid-template-columns: 4.5rem auto;
+        padding: 0;
+        background: transparent;
+    }
+
+    .dashboard aside {
+        background: var(--color-primary);
+    }
+
+    .dashboard aside h5 {
+        display: none;
+    }
+
+    .dashboard main table thead {
+        display: none;
+    }
+
+    .dashboard main table tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard main table tr:nth-child(even) {
+        background: var(--color-gray-900);
+    }
+
+    .dashboard main table tr:hover td {
+        background: transparent;
+    }
+
+    .dashboard main table td {
+        color: white;
+    }
+
 }
-
-
-
 
 
 
@@ -748,5 +893,61 @@ select {
         padding: 0;
     }
 
+    /*|||||||||||||||| Dashboard ||||||||||||||||*/
+
+    .dashboard {
+        margin-top: 5rem;
+    }
+
+    .dashboard_container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+    .dashboard main {
+        margin: 0;
+    }
+
+    .dashboard main h2 {
+        margin-top: 1rem;
+    }
+
+    .dashboard aside {
+        position: fixed;
+        box-shadow: 2rem 0 4rem rgba(0, 0, 0, 0.4);
+        left: 100%;
+        height: 100vh;
+        transition: var(--transition);
+        background: var(--color-primary);
+    }
+
+    .dashboard .sidebar_toggle {
+        display: inline-block;
+        background: var(--color-gray-700);
+        position: fixed;
+        right: 0;
+        bottom: 4rem;
+        z-index: 1;
+        width: 2.5fr;
+        height: 2.5fr;
+        border-radius: 50% 0 0 50%;
+        font-size: 1.3rem;
+        cursor: pointer;
+        box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.4);
+    }
+
+    .dashboard aside a h5 {
+        display: inline-block;
+    }
+
+    #hide_sidebar-btn {
+        display: none;
+    }
+
+    .side_img {
+        height: 3rem;
+        width: 3rem;
+    }
 
 }

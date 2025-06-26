@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog Website</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--//////////Navigation Start//////////-->
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html" class="nav_logo">Bloggers</a>
+
+            <ul class="nav_items">
+                <li><a href="blog.html">Blog </a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="signin.html">Signin</a></li>
+                <li class="nav_profile">
+                    <div class="avatar">
+                        <img src="images/avatar.png">
+                    </div>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button id="open_nav_button" aria-label="Open navigation menu">
+                <img src="images/menu.png" alt="Menu icon">
+            </button>
+
+            <button id="close_nav_button"><img src="images/close.png" alt="icon button"></button>
+        </div>
+    </nav>
+
+
+    <section class="form_section">
+        <div class="container form_section-container">
+
+            <h2>Edit Post</h2>
+
+            <form action="" enctype="multipart/form-data" method="post">
+                <!-- Title -->
+                <input type="text" placeholder="Title" name="title" required>
+
+                <!-- Category -->
+                <select name="category" required>
+                    <option value="">-- Select Category --</option>
+                    <option value="art">Art</option>
+                    <option value="nature">Nature</option>
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                </select>
+
+                <!-- Post Body -->
+                <textarea rows="10" placeholder="Body" name="body" required></textarea>
+
+                <!-- Featured Checkbox -->
+                <div class="form_control inline">
+                    <input type="checkbox" id="is_featured" name="is_featured" value="1" checked>
+                    <label for="is_featured">Featured</label>
+                </div>
+
+
+
+                <!-- Thumbnail Upload -->
+                <div class="form_control">
+                    <label for="thumbnail">Update Thumbnail</label>
+                    <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Update Post</button>
+
+                <!-- Signup Link (optional) -->
+                <small>Don't have an account? <a href="signup.html">Sign up</a></small>
+            </form>
+
+        </div>
+    </section>
+
+
+    <!--//////////Footer//////////-->
+
+    <footer>
+        <div class="footer_socials">
+            <a href="https://www.youtube.com/" targer="blank">
+                <img src="images/youtube.png" class="footer_image">
+
+                <a href="" targer="blank">
+                    <img src="images/facebook.png" class="footer_image">
+
+                    <a href="" targer="blank">
+                        <img src="images/linkedin.png" class="footer_image">
+
+                        <a href="" targer="blank">
+                            <img src="images/instagram.png" class="footer_image">
+
+
+                        </a>
+        </div>
+
+        <div class="container footer_container">
+            <article>
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="">Art</a></li>
+                    <li><a href="">Nature</a></li>
+                    <li><a href="">Food</a></li>
+                    <li><a href="">Travel</a></li>
+                    <li><a href="">Science & Technology</a></li>
+                    <li><a href="">Music</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="">Online Support</a></li>
+                    <li><a href="">Call Numbers</a></li>
+                    <li><a href="">Emails</a></li>
+                    <li><a href="">Social Support</a></li>
+                    <li><a href="">Location</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Blog</h4>
+                <ul>
+                    <li><a href="">Safety</a></li>
+                    <li><a href="">Repair</a></li>
+                    <li><a href="">Recent</a></li>
+                    <li><a href="">Popular</a></li>
+                    <li><a href="">Categories</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Permalinks</h4>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </article>
+
+        </div>
+
+        <div class="footer_copyright">
+            <small class="copyrg">Copyright &copy; Lasantha Wijewardhana</small>
+        </div>
+
+    </footer>
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
+
+<script src="main.js"></script>
+
+
+</body>
+
+</html>
